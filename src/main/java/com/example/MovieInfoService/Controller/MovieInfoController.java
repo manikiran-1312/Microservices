@@ -13,6 +13,7 @@ public class MovieInfoController {
 
 	@RequestMapping("/{movieid}")
 	public MovieInfo getMovieInfo(@PathVariable("movieid") String movieid) {
+		System.out.println("Welcome To Git");
 		return new MovieInfo(movieid, "Good Movie");
 	}
 	@GetMapping("/hello")
