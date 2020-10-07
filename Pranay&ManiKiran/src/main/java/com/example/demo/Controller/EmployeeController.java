@@ -454,5 +454,8 @@ public class EmployeeController {
 		}
 
 	}
+	
+	public String message() {
+	return "Welcome To Hyderabad";
 
 }
