@@ -171,4 +171,18 @@ public class EmployeeService {
 
 	}
 
+
+       public Employee findByPhone2(int phone) throws RecordNotFoundException {
+		Optional<Employee> employeeByPhone = employeeDao.findByPhone(phone);
+		if (employeeByPhone.isPresent()) {
+			return employeeByPhone.get();
+		} else {
+			throw new RecordNotFoundException(
+					"No Employee data Present with this PhoneNumber : " + phone );
+		}
+
+	}
+
+
+
 }
